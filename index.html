@@ -9,40 +9,30 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{font-family:Poppins,system-ui,sans-serif;background:linear-gradient(150deg,#003F79,#002A52);color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 16px}
-.box{width:min(820px,100%);text-align:center}
-.logo{background:#fff;display:inline-block;padding:14px 22px;border-radius:16px;margin-bottom:34px}
+body{font-family:Poppins,system-ui,sans-serif;background:linear-gradient(150deg,#003F79,#002A52);color:#fff;min-height:100vh;padding:48px 16px}
+.box{width:min(920px,100%);margin:0 auto;text-align:center}
+.logo{background:#fff;display:inline-block;padding:14px 22px;border-radius:16px;margin-bottom:30px}
 .logo img{height:44px;display:block}
 h1{font-size:clamp(28px,5vw,44px);font-weight:800;line-height:1.15}
 h1 span{color:#FF4D63}
-p{color:rgba(255,255,255,.75);margin:14px 0 34px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
-.pais{padding:20px;border-radius:20px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);text-align:left}
-.pais h2{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:600;margin-bottom:16px}
-.pais i{display:flex;width:34px;height:22px;border-radius:4px;overflow:hidden;flex:none}
-.pais i b{flex:1}
-.pais.bo i{flex-direction:column}
-.mon{display:flex;gap:10px}
-.mon a{flex:1;text-align:center;padding:11px 10px;border-radius:12px;font-weight:600;font-size:15px;text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,.35);transition:.2s}
-.mon a.eur{background:#D50926;border-color:#D50926}
-.mon a:hover{transform:translateY(-2px);filter:brightness(1.1)}
+p.sub{color:rgba(255,255,255,.75);margin:12px 0 30px}
+section{text-align:left;margin-top:26px}
+h2{font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:12px}
+.pais{display:flex;align-items:center;gap:12px;padding:16px 18px;border-radius:16px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#fff;text-decoration:none;transition:.2s;flex-wrap:wrap}
+.pais i{display:flex;width:34px;height:23px;border-radius:4px;overflow:hidden;flex:none;box-shadow:0 0 0 1px rgba(255,255,255,.25)}
+.pais span{font-size:17px;font-weight:600;flex:1}
+.pais em{font-style:normal;font-size:13px;color:#FF8A99;width:100%;padding-left:46px}
+.pais:hover{background:#D50926;border-color:#D50926;transform:translateY(-2px)}
+.pais:hover em{color:#fff}
 </style>
 </head>
 <body>
 <div class="box">
   <div class="logo"><img src="logo.png" alt="Realtyplus"></div>
   <h1>Master Franquicia <span>2026</span></h1>
-  <p>Elige el país para ver la propuesta.</p>
-  <div class="grid">
-    <div class="pais bo">
-      <h2><i><b style="background:#D52B1E"></b><b style="background:#F9E300"></b><b style="background:#007934"></b></i>Bolivia</h2>
-      <div class="mon"><a class="eur" href="bolivia/">Ver propuesta</a></div>
-    </div>
-    <div class="pais">
-      <h2><i><b style="background:#006847"></b><b style="background:#fff"></b><b style="background:#CE1126"></b></i>México</h2>
-      <div class="mon"><a class="eur" href="mexico/">Ver propuesta</a></div>
-    </div>
-  </div>
+  <p class="sub">Elige el país para ver la propuesta.</p>
+  <section><h2>Sudamérica</h2><div class="grid"><a class="pais" href="bolivia/"><i><svg viewBox="0 0 30 20" width="34" height="23" aria-hidden="true"><rect width="30" height="20" fill="#F9E300"/><rect width="30" height="6.67" fill="#D52B1E"/><rect y="13.33" width="30" height="6.67" fill="#007934"/></svg></i><span>Bolivia</span><em>Ver propuesta →</em></a><a class="pais" href="chile/"><i><svg viewBox="0 0 30 20" width="34" height="23" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="10" width="30" height="10" fill="#D52B1E"/><rect width="10" height="10" fill="#0039A6"/><path fill="#fff" d="M5 2.2l.66 2.03h2.13l-1.72 1.25.66 2.03L5 5.26l-1.73 1.25.66-2.03-1.72-1.25h2.13z"/></svg></i><span>Chile</span><em>Ver propuesta →</em></a><a class="pais" href="ecuador/"><i><svg viewBox="0 0 30 20" width="34" height="23" aria-hidden="true"><rect width="30" height="20" fill="#ED1C24"/><rect width="30" height="10" fill="#FFDD00"/><rect y="10" width="30" height="5" fill="#034EA2"/></svg></i><span>Ecuador</span><em>Ver propuesta →</em></a><a class="pais" href="peru/"><i><svg viewBox="0 0 30 20" width="34" height="23" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><rect width="10" height="20" fill="#D91023"/><rect x="20" width="10" height="20" fill="#D91023"/></svg></i><span>Perú</span><em>Ver propuesta →</em></a><a class="pais" href="uruguay/"><i><svg viewBox="0 0 30 20" width="34" height="23" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect y="2.22" width="30" height="2.22" fill="#0038A8"/><rect y="6.67" width="30" height="2.22" fill="#0038A8"/><rect y="11.11" width="30" height="2.22" fill="#0038A8"/><rect y="15.56" width="30" height="2.22" fill="#0038A8"/><rect width="11" height="11.11" fill="#fff"/><circle cx="5.5" cy="5.5" r="3" fill="#FCD116"/></svg></i><span>Uruguay</span><em>Ver propuesta →</em></a></div></section><section><h2>Norteamérica y Centroamérica</h2><div class="grid"><a class="pais" href="mexico/"><i><svg viewBox="0 0 30 20" width="34" height="23" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><rect width="10" height="20" fill="#006847"/><rect x="20" width="10" height="20" fill="#CE1126"/></svg></i><span>México</span><em>Ver propuesta →</em></a><a class="pais" href="costa-rica/"><i><svg viewBox="0 0 30 20" width="34" height="23" aria-hidden="true"><rect width="30" height="20" fill="#002B7F"/><rect y="3.33" width="30" height="13.34" fill="#fff"/><rect y="6.67" width="30" height="6.66" fill="#CE1126"/></svg></i><span>Costa Rica</span><em>Ver propuesta →</em></a><a class="pais" href="el-salvador/"><i><svg viewBox="0 0 30 20" width="34" height="23" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><rect width="30" height="6.67" fill="#0F47AF"/><rect y="13.33" width="30" height="6.67" fill="#0F47AF"/></svg></i><span>El Salvador</span><em>Ver propuesta →</em></a><a class="pais" href="guatemala/"><i><svg viewBox="0 0 30 20" width="34" height="23" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><rect width="10" height="20" fill="#4997D0"/><rect x="20" width="10" height="20" fill="#4997D0"/></svg></i><span>Guatemala</span><em>Ver propuesta →</em></a><a class="pais" href="honduras/"><i><svg viewBox="0 0 30 20" width="34" height="23" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><rect width="30" height="6.67" fill="#00BCE4"/><rect y="13.33" width="30" height="6.67" fill="#00BCE4"/></svg></i><span>Honduras</span><em>Ver propuesta →</em></a><a class="pais" href="nicaragua/"><i><svg viewBox="0 0 30 20" width="34" height="23" aria-hidden="true"><rect width="30" height="20" fill="#FFFFFF"/><rect width="30" height="6.67" fill="#0067C6"/><rect y="13.33" width="30" height="6.67" fill="#0067C6"/></svg></i><span>Nicaragua</span><em>Ver propuesta →</em></a><a class="pais" href="panama/"><i><svg viewBox="0 0 30 20" width="34" height="23" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect x="15" width="15" height="10" fill="#DA121A"/><rect y="10" width="15" height="10" fill="#072357"/><path fill="#072357" d="M7.5 2.2l.66 2.03h2.13l-1.72 1.25.66 2.03L7.5 5.26l-1.73 1.25.66-2.03-1.72-1.25h2.13z"/><path fill="#DA121A" d="M22.5 12.2l.66 2.03h2.13l-1.72 1.25.66 2.03L22.5 15.26l-1.73 1.25.66-2.03-1.72-1.25h2.13z"/></svg></i><span>Panamá</span><em>Ver propuesta →</em></a></div></section>
 </div>
 </body>
 </html>
