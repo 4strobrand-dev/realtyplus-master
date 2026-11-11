@@ -10,28 +10,38 @@
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:Poppins,system-ui,sans-serif;background:linear-gradient(150deg,#003F79,#002A52);color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 16px}
-.box{width:min(760px,100%);text-align:center}
+.box{width:min(820px,100%);text-align:center}
 .logo{background:#fff;display:inline-block;padding:14px 22px;border-radius:16px;margin-bottom:34px}
 .logo img{height:44px;display:block}
 h1{font-size:clamp(28px,5vw,44px);font-weight:800;line-height:1.15}
 h1 span{color:#FF4D63}
 p{color:rgba(255,255,255,.75);margin:14px 0 34px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px}
-a{display:flex;align-items:center;gap:14px;padding:18px 20px;border-radius:18px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);color:#fff;text-decoration:none;font-weight:600;font-size:18px;transition:.2s}
-a:hover{background:#D50926;border-color:#D50926;transform:translateY(-3px)}
-a i{display:flex;width:34px;height:22px;border-radius:4px;overflow:hidden;flex:none}
-a i b{flex:1}
-.bo i{flex-direction:column}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+.pais{padding:20px;border-radius:20px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);text-align:left}
+.pais h2{display:flex;align-items:center;gap:12px;font-size:20px;font-weight:600;margin-bottom:16px}
+.pais i{display:flex;width:34px;height:22px;border-radius:4px;overflow:hidden;flex:none}
+.pais i b{flex:1}
+.pais.bo i{flex-direction:column}
+.mon{display:flex;gap:10px}
+.mon a{flex:1;text-align:center;padding:11px 10px;border-radius:12px;font-weight:600;font-size:15px;text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,.35);transition:.2s}
+.mon a.eur{background:#D50926;border-color:#D50926}
+.mon a:hover{transform:translateY(-2px);filter:brightness(1.1)}
 </style>
 </head>
 <body>
 <div class="box">
   <div class="logo"><img src="logo.png" alt="Realtyplus"></div>
   <h1>Master Franquicia <span>2026</span></h1>
-  <p>Elige el país para conocer la oportunidad de liderar Realtyplus.</p>
+  <p>Elige el país y la moneda en la que quieres ver la propuesta.</p>
   <div class="grid">
-    <a class="bo" href="bolivia/"><i><b style="background:#D52B1E"></b><b style="background:#F9E300"></b><b style="background:#007934"></b></i>Bolivia</a>
-    <a href="mexico/"><i><b style="background:#006847"></b><b style="background:#fff"></b><b style="background:#CE1126"></b></i>México</a>
+    <div class="pais bo">
+      <h2><i><b style="background:#D52B1E"></b><b style="background:#F9E300"></b><b style="background:#007934"></b></i>Bolivia</h2>
+      <div class="mon"><a class="eur" href="bolivia/">€ Euros</a><a href="bolivia/?moneda=usd">$ Dólares</a></div>
+    </div>
+    <div class="pais">
+      <h2><i><b style="background:#006847"></b><b style="background:#fff"></b><b style="background:#CE1126"></b></i>México</h2>
+      <div class="mon"><a class="eur" href="mexico/">€ Euros</a><a href="mexico/?moneda=usd">$ Dólares</a></div>
+    </div>
   </div>
 </div>
 </body>
