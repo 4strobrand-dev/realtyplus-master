@@ -163,6 +163,7 @@ input[type=range]{width:100%;accent-color:var(--red);height:6px}
 .stabs button.on{background:var(--red);color:#fff}
 .sim .box[hidden]{display:none}
 .sim .box + .box{margin-top:30px}
+.out .row.sub{border-bottom:0;margin-top:10px;padding:12px 16px;background:rgba(255,255,255,.08);border-radius:14px;font-weight:600}
 .out .row.sum{border-bottom:0;margin-top:6px;padding:14px 16px;background:rgba(255,255,255,.08);border-radius:14px}
 @media(max-width:700px){.stabs{display:flex;width:100%;margin-top:22px}.stabs button{flex:1;font-size:12.5px;padding:10px 8px;line-height:1.25}}
 @media(max-width:900px){.sim .box{grid-template-columns:1fr}.sim .in,.sim .out{padding:28px 22px}}
@@ -397,7 +398,7 @@ footer img{height:36px}
   <div class="wrap">
     <div>
       <span class="flag"><i><svg viewBox="0 0 30 20" width="30" height="20" aria-hidden="true"><rect width="30" height="20" fill="#fff"/><rect x="15" width="15" height="10" fill="#DA121A"/><rect y="10" width="15" height="10" fill="#072357"/><path fill="#072357" d="M7.5 2.2l.66 2.03h2.13l-1.72 1.25.66 2.03L7.5 5.26l-1.73 1.25.66-2.03-1.72-1.25h2.13z"/><path fill="#DA121A" d="M22.5 12.2l.66 2.03h2.13l-1.72 1.25.66 2.03L22.5 15.26l-1.73 1.25.66-2.03-1.72-1.25h2.13z"/></svg></i>Master Franquicia · Panamá 2026</span>
-      <h1>Sé el dueño de <span>Realtyplus</span> en toda Panamá.</h1>
+      <h1>Sé el dueño de <span>Realtyplus</span> en todo Panamá.</h1>
       <p class="sub">Buscamos al socio que liderará nuestra red inmobiliaria en el país: exclusividad nacional, una marca internacional y un modelo probado para ganar con cada franquicia que abras.</p>
       <div class="ctas">
         <a href="#contacto" class="btn btn-red">Solicitar entrevista <svg><use href="#i-arrow"/></svg></a>
@@ -509,7 +510,7 @@ footer img{height:36px}
     <h2>¿Cuánto puede generar <em>tu red en Panamá?</em></h2>
     <p class="lead">Tus ingresos como Master vienen de dos fuentes: la red de franquicias que vendes y tu propia oficina Quartz, obligatoria para todo Master. Simula las dos en cada pestaña.</p>
     <div class="stabs" role="tablist">
-      <button class="on" data-s="sb-fr" role="tab">Venta de franquicias</button>
+      <button class="on" data-s="sb-fr" role="tab">Ingresos de franquicias</button>
       <button data-s="sb-qz" role="tab">Tu oficina Quartz</button>
     </div>
     <div class="box" id="sb-fr" style="text-align:left">
@@ -523,7 +524,8 @@ footer img{height:36px}
         <div class="row"><span>Franquicias activas al final</span><b id="o-net">0</b></div>
         <div class="row"><span>Ingresos por cánones de entrada</span><b id="o-can">0</b></div>
         <div class="row"><span>Ingresos por royalties fijos</span><b id="o-roy">0</b></div>
-        <div class="total"><span>Facturación acumulada del Master</span><b id="o-tot">0</b></div>
+        <div class="row sub"><span>Facturación por franquicias en <span class="yy">3</span> años</span><b id="o-tot">0</b></div>
+        <div class="total"><span>Total Master en <span class="yy">3</span> años (franquicias + Quartz)</span><b id="o-all1">0</b></div>
         <p class="note">Simulación orientativa con las tarifas de referencia 2026, calculada con el royalty fijo. A cada franquicia se le cobra el mayor entre el royalty fijo y el 3% de su facturación, así que el ingreso real puede ser superior. No incluye renovaciones, partners, proveedores ni negocio internacional.</p>
         <a href="#contacto" class="btn btn-red">Quiero ver el plan completo <svg><use href="#i-arrow"/></svg></a>
       </div>
@@ -538,8 +540,8 @@ footer img{height:36px}
       <div class="out">
         <div class="row"><span>Operaciones al año</span><b id="o-qops">0</b></div>
         <div class="row"><span>Facturación mensual</span><b id="o-qmes">0</b></div>
-        <div class="total"><span>Facturación bruta anual de tu Quartz</span><b id="o-qtot">0</b></div>
-        <div class="row sum"><span>Total Master en <b id="o-qy">3</b> años (franquicias + Quartz)</span><b id="o-qall">0</b></div>
+        <div class="row sub"><span>Facturación bruta anual de tu Quartz</span><b id="o-qtot">0</b></div>
+        <div class="total"><span>Total Master en <span class="yy">3</span> años (franquicias + Quartz)</span><b id="o-qall">0</b></div>
         <p class="note">Estimación orientativa de la facturación bruta de la oficina, antes de gastos y comisiones de los agentes. Toda Master Franquicia incluye abrir una oficina Quartz propia, que sirve de centro piloto en el país. El total suma la facturación de tu red de franquicias (pestaña anterior) y la de tu Quartz en los mismos años.</p>
         <a href="#contacto" class="btn btn-red">Quiero ver el plan completo <svg><use href="#i-arrow"/></svg></a>
       </div>
@@ -558,7 +560,7 @@ footer img{height:36px}
       <button data-t="p2" role="tab">Lo que das a tu red en Panamá</button>
     </div>
     <div class="panel svc on" id="p1">
-      <div class="sv"><svg><use href="#i-shield"/></svg><div><h3>Marca internacional</h3><p>Uso exclusivo de la marca Realtyplus en toda Panamá.</p></div></div>
+      <div class="sv"><svg><use href="#i-shield"/></svg><div><h3>Marca internacional</h3><p>Uso exclusivo de la marca Realtyplus en todo Panamá.</p></div></div>
       <div class="sv"><svg><use href="#i-book"/></svg><div><h3>Manuales y know-how</h3><p>Metodologías, protocolos y sistemas probados.</p></div></div>
       <div class="sv"><svg><use href="#i-users"/></svg><div><h3>Formación inicial y continua</h3><p>Programas para directivos, franquiciados y agentes.</p></div></div>
       <div class="sv"><svg><use href="#i-cpu"/></svg><div><h3>Tecnología y CRM</h3><p>CRM, web corporativa y plataformas de gestión.</p></div></div>
@@ -656,7 +658,7 @@ footer img{height:36px}
     <div class="list" style="text-align:left">
       <details><summary>¿Qué perfil buscamos para la Master Franquicia de Panamá?</summary><p>Empresarios o grupos inversores con visión de negocio, capacidad para montar una estructura nacional e, idealmente, experiencia en el sector inmobiliario, franquicias o gestión de equipos comerciales.</p></details>
       <details><summary>¿Necesito experiencia inmobiliaria?</summary><p>Ayuda, pero no es imprescindible. La Central te entrega manuales, formación y soporte, y tu centro piloto Quartz te permite aprender y validar el modelo en Panamá antes de escalarlo.</p></details>
-      <details><summary>¿Qué incluye la exclusividad?</summary><p>El derecho a comercializar la marca Realtyplus y sus franquicias en toda Panamá durante 10 años, incluida la venta de Masters de Zona por provincias o regiones.</p></details>
+      <details><summary>¿Qué incluye la exclusividad?</summary><p>El derecho a comercializar la marca Realtyplus y sus franquicias en todo Panamá durante 10 años, incluida la venta de Masters de Zona por provincias o regiones.</p></details>
       <details><summary>¿Cómo se fijan los precios de las franquicias en Panamá?</summary><p>Se aplican los valores estándar del modelo de negocio internacional. Cualquier ajuste o modificación debe ser consensuada con la Central Internacional y validada con un estudio detallado de la renta per cápita, competencia y población en el país.</p></details>
       
       
@@ -777,8 +779,9 @@ function calcQ(){
   document.getElementById('o-qops').textContent=n1(ops);
   document.getElementById('o-qmes').textContent=fmt(anual/12);
   document.getElementById('o-qtot').textContent=fmt(anual)+' / año';
-  document.getElementById('o-qy').textContent=yrs;
-  document.getElementById('o-qall').textContent=fmt(window.__bruto+anual*yrs);
+  document.querySelectorAll('.yy').forEach(e=>e.textContent=yrs);
+  const all=fmt(window.__bruto+anual*yrs);
+  document.getElementById('o-qall').textContent=all;document.getElementById('o-all1').textContent=all;
 }
 document.querySelectorAll('.sim input').forEach(i=>i.addEventListener('input',calcQ));calcQ();
 
